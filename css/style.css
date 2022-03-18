@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Castoro;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../assets/book1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    background: #FB9300;
+    padding: 12px;
+    color: black;
+    text-align: center;
+    height: 140px;
+    position: relative;
+}
+
+header p {
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+#opening {
+    background: #FB9300;
+    border: 10px solid #FB9300;
+}
+
+#unread,
+#read {
+    background: #FB9300;
+    border: 10px solid #FB9300;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 1024px;
+    border-radius: 8px;
+    margin: 16px;
+    background: #f8f9fa;
+    padding: 10px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.item > .inner h2 {
+    margin-bottom: unset;
+}
+
+.item > .inner p {
+    margin-top: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18;
+    font-weight: lighter;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text],
+input[type=date] {
+    font-family: Castoro;
+    background: #f5f1ff;
+    border: 2px solid #e2703a;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.btn-submit {
+    width: fit-content;
+    border: none;
+    font-family: Castoro;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid #ff7a00;
+    color: black;
+    font-size: 24px;
+    margin-top: 15px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #ff7a00;
+    color: white;
+}
+
+input[type=text],
+input[type=date],
+.btn-submit:focus {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+.check-button {
+    background: url('../assets/check-outline-orange.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('../assets/check-solid-orange.svg');
+    background-size: contain;
+}
+
+.trash-button {
+    background: url('../assets/trash-outline-orange.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('../assets/trash-fill-orange.png');
+    background-size: contain;
+}
+
+.undo-button {
+    background: url('../assets/undo-outline-orange.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('../assets/undo-fill-orange.png');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background: #FB9300;
+    display: flexbox;
+    float: right;
+    margin-top: 30px;
+    margin-right: 150px;
+}
+  
+.title {
+    color: solid black;
+    font-size: 18px;
+    font: bolder;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        margin: 0;
+    }
+
+    .wrapper .container {
+        width: 100%;
+    }
+
+    .list-item {
+        width: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
